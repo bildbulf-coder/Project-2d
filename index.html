@@ -1,20 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <style>
-    body { margin: 0; background-color: #f0f0f0; }
-    model-viewer { width: 100%; height: 100vh; }
-  </style>
+<style>
+  body { 
+    margin: 0; 
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); 
+    font-family: 'Segoe UI', sans-serif;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh;
+    color: white;
+  }
+  .text-box { text-align: center; margin-top: 10px; margin-bottom: 10px; }
+  
+  
+  .ar-button {
+    background: #4ecca3;
+    color: #1a1a2e;
+    padding: 10px 20px; 
+    border-radius: 30px; 
+    border: none;
+    font-weight: 600;
+    font-size: 14px; 
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  model-viewer { width: 100%; height: 80vh; } 
+</style>
 </head>
 <body>
+
+  <div class="text-box">
+    <h1>PHOENIX</h1>
+    <p>Putar untuk melihat detail</p>
+  </div>
+
   <model-viewer 
-    src="https://github.com/bildbulf-coder/Project-2d/blob/c9ee0660889b0bc6e2a8aa22ce2ae4b1fa0ee890/b174406023e2192222ade2b5a32dc664.jpg"
-    poster="https://raw.githubusercontent.com/bildbulf-coder/Project-2d/4afef412f01eb15f12eb0f34c10f1f52916d712a/b174406023e2192222ade2b5a32dc664.jpg"
+    src="phoenix_bird.glb"
     ar 
-    ar-modes="webxr scene-viewer quick-look"
-    camera-controls
-    reveal="interaction">
+    camera-controls 
+    auto-rotate>
+    
+    <button slot="ar-button" class="ar-button">
+     Lihat 🐦‍🔥 di Ruangan
+    </button>
   </model-viewer>
+
 </body>
 </html>
